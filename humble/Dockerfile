@@ -44,6 +44,8 @@ RUN apt-get update && \
         gstreamer1.0-plugins-ugly \
         gstreamer1.0-tools \
         i2c-tools \
+        iproute2 \
+        iputils-ping \
         iw \
         kbd \
         kmod \
