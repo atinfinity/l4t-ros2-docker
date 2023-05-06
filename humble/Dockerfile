@@ -81,7 +81,7 @@ RUN apt-get update && \
 # EGL
 RUN echo "/usr/lib/aarch64-linux-gnu/tegra" >> /etc/ld.so.conf.d/nvidia-tegra.conf && \
     echo "/usr/lib/aarch64-linux-gnu/tegra-egl" >> /etc/ld.so.conf.d/nvidia-tegra.conf
-RUN rm /usr/share/glvnd/egl_vendor.d/50_mesa.json && \
+RUN rm -rf /usr/share/glvnd/egl_vendor.d && \
     mkdir -p /usr/share/glvnd/egl_vendor.d/ && echo '\
 {\
     "file_format_version" : "1.0.0",\
