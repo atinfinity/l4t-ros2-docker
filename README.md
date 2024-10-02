@@ -14,7 +14,7 @@ This Dockerfile is based on [nvidia/container-images/l4t-base](https://gitlab.co
 
 |L4T version of package|ROS 2 distribution|Dockerfile|
 |---|---|---|
-|35.3.1|humble|[humble/Dockerfile](humble/Dockerfile)|
+|35.3.1|Humble|[humble/Dockerfile](humble/Dockerfile)|
 
 ## Checked applications
 
