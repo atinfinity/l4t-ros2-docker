@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a Dockerfile to make ROS 2 environment(Ubuntu 22.04) on Jetson device.  
+This is a Dockerfile to make ROS 2 environment on Jetson device.  
 This Dockerfile is based on [nvidia/container-images/l4t-base](https://gitlab.com/nvidia/container-images/l4t-base).
 
 ## Requirements
@@ -10,26 +10,13 @@ This Dockerfile is based on [nvidia/container-images/l4t-base](https://gitlab.co
 - Docker
 - nvidia-docker2
 
-## Build docker image
+## Version
 
-```
-cd humble
-docker build --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t l4t-ros2:humble .
-```
+|L4T version of package|ROS 2 distribution|Dockerfile|
+|---|---|---|
+|35.3.1|humble|[humble/Dockerfile](humble/Dockerfile)|
 
-## Launch docker container
-
-```
-xhost +
-docker run -it --rm --net=host --runtime nvidia -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix l4t-ros2:humble bash
-```
-
-## Reference
-
-- <https://gitlab.com/nvidia/container-images/l4t-base>
-- <https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html>
-
-## Appendix
+## Checked applications
 
 I tested on Jetson Orin NX 16GB.
 
@@ -60,3 +47,8 @@ $ ros2 run demo_nodes_py listener
 ### Navigation2
 
 ![](image/nav2.png)
+
+## Reference
+
+- <https://gitlab.com/nvidia/container-images/l4t-base>
+- <https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html>

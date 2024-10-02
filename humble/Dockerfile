@@ -104,25 +104,16 @@ RUN echo "deb https://repo.download.nvidia.com/jetson/common r35.3 main" >> /etc
 RUN wget -O /etc/jetson-ota-public.key https://gitlab.com/nvidia/container-images/l4t-base/-/raw/master/jetson-ota-public.key && \
     apt-key add /etc/jetson-ota-public.key
 
-# CUDA, cuDNN, TensorRT
+# CUDA, cuDNN
 RUN apt-get update && \
     apt-get install -qq -y --no-install-recommends \
         cuda \
         libcudnn8 \
         libcudnn8-dev \
         libcudnn8-samples \
-        tensorrt \
-        tensorrt-libs \
-        tensorrt-dev \
-        libnvinfer8 \
-        libnvinfer-dev \
-        gcc-9 \
-        g++-9 \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-RUN ln -s /usr/bin/gcc-9 /usr/local/cuda/bin/gcc && \
-    ln -s /usr/bin/g++-9 /usr/local/cuda/bin/g++
 
 RUN ldconfig
 
