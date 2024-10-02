@@ -53,3 +53,4 @@ $ ros2 run demo_nodes_py listener
 
 - <https://gitlab.com/nvidia/container-images/l4t-base>
 - <https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html>
+- <https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html>
