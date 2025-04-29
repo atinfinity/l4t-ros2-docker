@@ -8,7 +8,7 @@ This Dockerfile is based on [nvidia/container-images/l4t-base](https://gitlab.co
 ## Requirements
 
 - Docker
-- nvidia-docker2
+- NVIDIA Container Toolkit
 
 ## Version
 
