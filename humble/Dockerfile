@@ -99,8 +99,9 @@ RUN mkdir -p /usr/share/egl/egl_external_platform.d/ && echo '\
     }\
 }' > /usr/share/egl/egl_external_platform.d/nvidia_wayland.json
 
-RUN echo "deb https://repo.download.nvidia.com/jetson/common r35.3 main" >> /etc/apt/sources.list.d/nvidia-l4t-apt-source.list && \
-    echo "deb https://repo.download.nvidia.com/jetson/t234 r35.3 main" >> /etc/apt/sources.list.d/nvidia-l4t-apt-source.list
+RUN echo "deb https://repo.download.nvidia.com/jetson/common r36.4 main" >> /etc/apt/sources.list.d/nvidia-l4t-apt-source.list && \
+    echo "deb https://repo.download.nvidia.com/jetson/t234 r36.4 main" >> /etc/apt/sources.list.d/nvidia-l4t-apt-source.list && \
+    echo "deb https://repo.download.nvidia.com/jetson/ffmpeg r36.4 main" >> /etc/apt/sources.list.d/nvidia-l4t-apt-source.list
 RUN wget -O /etc/jetson-ota-public.key https://gitlab.com/nvidia/container-images/l4t-base/-/raw/master/jetson-ota-public.key && \
     apt-key add /etc/jetson-ota-public.key
 
@@ -108,9 +109,9 @@ RUN wget -O /etc/jetson-ota-public.key https://gitlab.com/nvidia/container-image
 RUN apt-get update && \
     apt-get install -qq -y --no-install-recommends \
         cuda \
-        libcudnn8 \
-        libcudnn8-dev \
-        libcudnn8-samples \
+        libcudnn9 \
+        libcudnn9-dev \
+        libcudnn9-samples \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
