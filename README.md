@@ -7,6 +7,8 @@ This Dockerfile is based on [nvidia/container-images/l4t-base](https://gitlab.co
 
 ## Requirements
 
+- Jetson Linux 36.4 <https://developer.nvidia.com/embedded/jetson-linux-r3640>
+  - JetPack 6.1 <https://developer.nvidia.com/embedded/jetpack-sdk-61>
 - Docker
 - NVIDIA Container Toolkit
 
