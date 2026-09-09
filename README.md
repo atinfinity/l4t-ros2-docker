@@ -7,8 +7,10 @@ This Dockerfile is based on [nvidia/container-images/l4t-base](https://gitlab.co
 
 ## Requirements
 
-- Jetson Linux 36.4 <https://developer.nvidia.com/embedded/jetson-linux-r3640>
+- Jetson Linux 36.4 <https://developer.nvidia.com/embedded/jetson-linux-r3640> (`humble`, `jazzy`)
   - JetPack 6.1 <https://developer.nvidia.com/embedded/jetpack-sdk-61>
+- Jetson Linux 39.2 <https://developer.nvidia.com/embedded/jetson-linux> (`lyrical`)
+  - JetPack 7.2 <https://developer.nvidia.com/embedded/jetpack>
 - Docker
 - NVIDIA Container Toolkit
 
@@ -18,6 +20,7 @@ This Dockerfile is based on [nvidia/container-images/l4t-base](https://gitlab.co
 |---|---|---|
 |36.4.0|Humble|[humble/Dockerfile](humble/Dockerfile)|
 |36.4.0|Jazzy|[jazzy/Dockerfile](jazzy/Dockerfile)|
+|39.2.0|Lyrical|[lyrical/Dockerfile](lyrical/Dockerfile)|
 
 ## Checked applications
 
@@ -56,3 +59,4 @@ $ ros2 run demo_nodes_py listener
 - <https://gitlab.com/nvidia/container-images/l4t-base>
 - <https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html>
 - <https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html>
+- <https://docs.ros.org/en/lyrical/Get-Started/Installation/Ubuntu-Install-Debs.html>
